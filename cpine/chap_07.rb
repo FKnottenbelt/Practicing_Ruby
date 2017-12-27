@@ -46,3 +46,27 @@ my_array.length.times {
 puts "Sorted without .sort!: "
 print my_array
 puts
+##########################################
+=begin
+Write a program which will display a Table of Contents so that it looks like this:
+
+           Table of contents            
+Chapter 1: Numbers                page 1
+Chapter 2: Letters               page 72
+Chapter 3: Variable             page 118
+
+but now from an array...
+=end
+my_table =["Table of Contents","Chapter 1: Numbers","page 1","Chapter 2: Letters",
+  "page 72","Chapter 3: Variable","page 118"]
+
+line_widht = 40
+my_table.each { |i| 
+  if my_table.index(i) == 0 
+    puts i.center(line_widht)
+  elsif my_table.index(i).odd?
+    print i.ljust(line_widht/2)
+  else
+    puts i.rjust(line_widht/2)
+  end
+}
