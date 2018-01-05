@@ -66,3 +66,32 @@ puts "original_array #{original_array}"
 print "'hand' sorted array: #{sorted_array}"
 puts
 puts "with sort: #{array_with_sort}"
+#######################################
+# Shuffle: sort array completely random
+original_array = ["noot","Aap","Mies","aap","zoro","moot"]
+
+def shuffle arr_in
+  lengte = arr_in.length
+  new_array=[]
+  lengte.times do
+    new_array.push("0")
+  end
+  
+   arr_in.each do |i|
+     done = false
+     until done
+       rand_index = rand(arr_in.length)
+       if new_array[rand_index] == "0"
+          new_array[rand_index] = i
+          done = true
+       else 
+         done = false
+       end
+     end 
+   end
+   
+   return new_array
+end
+
+print shuffle(original_array)
+puts
