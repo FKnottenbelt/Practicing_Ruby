@@ -4,6 +4,7 @@
 # containing all three groups. 
 
 # arr = ['Dave', 7, 'Miranda', 3, 'Jason', 11]
+# NB: arr might grow over time. Your solutions should take this into account
 
 # expected output:
 # [['Dave', 7],['Miranda', 3],['Jason', 11]]
@@ -14,7 +15,6 @@ arr =['Dave', 7, 'Miranda', 3, 'Jason', 11]
 
 new_arr=[]
 new_sub_arr = []
-
 
 arr.each_with_index do |e, i|
 
