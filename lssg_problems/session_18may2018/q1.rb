@@ -49,7 +49,7 @@ def to_weird_case(string)
   string.split().map do |word|
    word.split('').map.with_index do |char, index|
      if multiple_of_4?(index + 1)
-        char.upcase!
+        char.upcase
      else
         char
      end
@@ -63,7 +63,7 @@ def to_weird_case(string)
   string.split().map do |word|
    word.split('').map.with_index do |char, index|
      if ((index + 1) % 4 == 0)
-        char.upcase!
+        char.upcase
      else
         char
      end
