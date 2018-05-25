@@ -1,4 +1,4 @@
-# bookseller.rb
+# bookseller.rb 6 kyu
 
 =begin
 A bookseller has lots of books classified in 26 categories labeled
