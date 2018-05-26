@@ -75,3 +75,10 @@ end
 p countSmileys([':)', ';(', ';}', ':-D']) == 2
 p countSmileys([';D', ':-(', ':-)', ';~)']) == 3
 p countSmileys([';]', ':[', ';*', ':$', ';-D']) == 1
+
+
+# top solutions
+def count_smileys(arr)
+  arr.count { |e| e =~ /(:|;){1}(-|~)?(\)|D)/ }
+end
+
