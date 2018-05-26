@@ -1,4 +1,4 @@
-# count_smiley.rb
+# count_smiley.rb 6 kyu
 
 =begin
 Given an array (arr) as an argument complete the function countSmileys
