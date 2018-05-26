@@ -65,6 +65,18 @@ cost = 124
 p buy_tofu(cost,box) == [121, 1, 181, 65]
 =end
 
+
+
+
+
+
+
+
+
+
+
+
+puts '############ solutions'
 =begin
 i: string with box items
 o: [count of mon coins in box,
@@ -96,18 +108,6 @@ f: - count number of mon en monme in box => array
      - if you don't have that  => leave
    - return array
 =end
-
-
-
-
-
-
-
-
-
-
-
-puts '############ solutions'
 
 def buy_tofu cost, box
   # count number of mon en monme in box => array

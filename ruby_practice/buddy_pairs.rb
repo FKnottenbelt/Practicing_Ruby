@@ -33,7 +33,22 @@ Note
 Translators are welcome for all languages, except for Ruby since the Bash
 random tests needing Ruby a Ruby reference solution is already there though
 not yet published.
-======
+=end
+
+p buddy(10, 50) == "(48 75)"
+p buddy(48, 50) == "(48 75)"
+p buddy(1071625, 1103735) == "(1081184 1331967)"
+p buddy(57345, 90061) == "(62744 75495)"
+p buddy(2177, 4357) == "Nothing"
+
+
+
+
+
+
+
+puts '######## solution ###########'
+
 i: 2 integers. start and limit
 o: budy pairs in () and string: "(48 75)" or 'Nothing'
 r: n is between start and limit. m > n
