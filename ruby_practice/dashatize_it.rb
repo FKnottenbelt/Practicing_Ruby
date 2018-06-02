@@ -1,4 +1,4 @@
-# dashatize_it.rb
+# dashatize_it.rb 6 kyu
 
 =begin
 Given a number, return a string with dash'-'marks before and after each
