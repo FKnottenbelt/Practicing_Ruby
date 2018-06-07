@@ -40,6 +40,43 @@ Note:
 In the result codes and their values are in the same order as in M.
 =end
 
+
+# test
+b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+c = ["A", "B"]
+res = "(A : 200) - (B : 1140)"
+p stockList(b, c) == res
+
+b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+c = []
+res = ""
+p stockList(b, c) == res
+
+b = []
+c = ["A", "B"]
+res = ""
+p stockList(b, c) == res
+
+b = ["CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+c = ["A", "B"]
+res = "(A : 0) - (B : 1140)"
+p stockList(b, c) == res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######################
 =begin
 r: 26 catogories A..Z
    per book: code c of 3, 4, 5 or more capitals letters
@@ -75,27 +112,6 @@ def stockList(listOfArt, listOfCat)
   end
   output.join(' - ')
 end
-
-# test
-b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = ["A", "B"]
-res = "(A : 200) - (B : 1140)"
-p stockList(b, c) == res
-
-b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = []
-res = ""
-p stockList(b, c) == res
-
-b = []
-c = ["A", "B"]
-res = ""
-p stockList(b, c) == res
-
-b = ["CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = ["A", "B"]
-res = "(A : 0) - (B : 1140)"
-p stockList(b, c) == res
 
 # top solution
 def stockList(stock_list, categories)

@@ -2,8 +2,34 @@
 =begin
 Complete the solution so that the function will break up camel casing, using
 a space between words.
+=end
 
-==
+
+
+p solution('camelCasing') # => should return 'camel Casing'
+p solution('camel NotCasing')
+p solution('Camel NotCasing')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################
+=begin
 i: string
 o: broken up string
 f: if a lowcase char is followed by an uppercase char, insert space
@@ -25,11 +51,6 @@ def solution(string)
     end
   end.join
 end
-
-
-p solution('camelCasing') # => should return 'camel Casing'
-p solution('camel NotCasing')
-p solution('Camel NotCasing')
 
 # top solution (but both fail my tests)
 def solution(string)
