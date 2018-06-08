@@ -40,7 +40,35 @@ thirt(1234567) calculates 178, then 87, then 87 and returns 87.
 
 thirt(321) calculates 48, 48 and returns 48
 ==
+=end
 
+
+
+
+
+p thirt(8529) == 79
+p thirt(85299258) == 31
+p thirt(5634) == 57
+p thirt(1111111111) == 71
+p thirt(987654321) == 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################
+=begin
 i: integer
 o:
 f: split input into digits
@@ -81,11 +109,6 @@ def thirt(n)
   saved_sum
 end
 
-p thirt(8529) == 79
-p thirt(85299258) == 31
-p thirt(5634) == 57
-p thirt(1111111111) == 71
-p thirt(987654321) == 30
 
 # top solutions
 def thirt(num)

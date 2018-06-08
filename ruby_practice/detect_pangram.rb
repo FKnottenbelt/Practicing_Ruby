@@ -43,3 +43,18 @@ def is_pangram(pangram)
   all_letters = ('a'..'z').to_a
   all_letters - pangram == [] ? true : false
 end
+
+# alternative
+=begin
+input downcase
+input to array
+a..z to array
+substract a..z from input
+rest should not contain letters
+=end
+def is_pangram(string)
+  string = string.downcase.split('')
+  all_letters = ('a'..'z').to_a
+  rest = string - all_letters
+  rest.count{ |char| all_letters.include?(char) } == 0
+end

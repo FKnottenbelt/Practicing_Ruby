@@ -46,7 +46,14 @@ def createPhoneNumber(arr)
   arr.join
 end
 
-
+# alternative
+def createPhoneNumber(arr)
+  number = "(000) 000-0000"
+  arr.each do |int|
+    number.sub!('0', int.to_s)
+  end
+  number
+end
 
 # top solutions
 def createPhoneNumber(array)
