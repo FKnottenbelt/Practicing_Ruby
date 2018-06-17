@@ -26,6 +26,8 @@ p find_outlier([160, 3, 1719, 19, 11, 13, -21]) == 160
 
 
 
+
+
 ################
 def find_outlier(integers)
   if integers[0...4].count{ |i| i.odd?} > 1
@@ -35,7 +37,21 @@ def find_outlier(integers)
   end
 end
 
-
+# alternative
+=begin
+i: array either odd or even ints except 1
+o return the one int
+f: see if arr is odd or even: take first 3, count evens
+   then select then opposite
+=end
+def find_outlier(arr)
+  subset = arr.take(3)
+  if subset.count { |i| i.even? } >= 2
+    arr.select { |i| i.odd? }.first
+  else
+    arr.select { |i| i.even? }.first
+  end
+end
 
 # top solution
 def find_outlier(integers)
