@@ -23,6 +23,15 @@
 # Note: all the hashes are pre-validated and will only
 # contain A-Z, a-z, '-' and '.'.
 
+
+p list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]) == 'Bart, Lisa & Maggie'
+p list([ {name: 'Bart'}, {name: 'Lisa'} ]) == 'Bart & Lisa'
+p list([ {name: 'Bart'} ]) == 'Bart'
+p list([]) == ''
+
+
+
+###############################3
 def list names
   output = ""
   names.each_with_index do |hash, i|
@@ -35,6 +44,16 @@ def list names
     end
   end
   output
+end
+
+# alternative
+def list(arr)
+  return '' if arr.empty?
+  names = []
+  arr.each { |hash| names << hash[:name] }
+  last = names.pop
+  string = names.join(', ')
+  names == []? string + last : string + " & " + last
 end
 
 # top solutions
