@@ -38,3 +38,17 @@ f: select count is odd
 def find_it(arr)
   arr.select { |int| arr.count(int).odd? }.first
 end
+
+# alternative
+=begin
+i: int
+o: int that appears odd num of times
+f: loop
+    count. if odd retrun
+=end
+
+def find_it(arr)
+  arr.each do |int|
+    return int if arr.count(int).odd?
+  end
+end
