@@ -60,7 +60,7 @@ def format_words(words)
   words.reject(&:empty?).join(', ').gsub(/, (\w+)$/) { " and #{$1}" } rescue ''
 end
 
-# top solution with regex
+# top solution without regex
 def format_words(words)
   return "" if words.nil?
   words.reject! { |word| word == "" }
