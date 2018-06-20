@@ -28,15 +28,40 @@ The middle character(s) of the word represented as a string.
 ===
 =end
 
-def get_middle(s)
-  s.size.odd? ? s[s.size / 2] : s[(s.size / 2) - 1] + s[s.size / 2]
-end
+
+
 
 p get_middle("test") == "es"
 p get_middle("testing") =="t"
 p get_middle("middle") == "dd"
 p get_middle("A") == "A"
 p get_middle("of") == "of"
+
+
+
+
+
+#############3
+def get_middle(s)
+  s.size.odd? ? s[s.size / 2] : s[(s.size / 2) - 1] + s[s.size / 2]
+end
+
+# alternative
+=begin
+i: string
+o: middel (2) chars
+p: test = even 4, return 2and3 (half+remainder + 1)
+   testing = odd 7 return 4 (half+remainder)
+f: half, remainder = len.divmod(2)
+   if len is even take letters (half+remainder + 1) but -1 for index
+   if len is odd take letters (half+remainder) but -1 for index
+=end
+
+def get_middle(string)
+  half, remainder = string.size.divmod(2)
+  middle = (half + remainder) - 1
+  string.size.even? ? string[middle..(middle + 1)] : string[middle]
+end
 
 # top solution
 def get_middle(s)
