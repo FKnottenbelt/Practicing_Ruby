@@ -1,8 +1,9 @@
 # keep_order
 
-# Write a function which takes a sorted array ary and a value val, and returns the lowest index where you
-# could insert val to maintain the sorted-ness of the array. The input array will always be sorted in
-# ascending order. It may contain duplicates.
+# Write a function which takes a sorted array ary and a value
+# val, and returns the lowest index where you could insert val
+# to maintain the sorted-ness of the array. The input array will
+# always be sorted in ascending order. It may contain duplicates.
 
 
 puts keep_order([1, 2, 3, 4, 7], 5) == 4
@@ -11,10 +12,6 @@ puts keep_order([1, 1, 2, 2, 2], 2) == 2
 puts keep_order([1, 2, 3, 4], 5) == 4
 puts keep_order([1, 2, 3, 4], -1) == 0
 puts keep_order([1, 2, 3, 4], 2) == 1
-
-
-
-
 
 
 
@@ -43,4 +40,10 @@ def keep_order(arr, n)
       return index + 1
     end
   end
+end
+
+# alternative
+def keep_order(arr, val)
+  num = arr.find{ |i| i >= val}
+  num.nil? ? arr.size : arr.index(num)
 end
