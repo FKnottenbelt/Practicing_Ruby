@@ -18,6 +18,25 @@
 # iq_test("1 2 1 1") => 2 // Second number is even, while the rest
 # of the numbers are odd
 
+p iq_test("2 4 7 8 10") == 3
+p iq_test("1 2 2") == 1
+p iq_test("88 96 66 51 14 88 2 92 18 72 18 88 20 30 4 82 90 100 24 46") == 4
+p iq_test("100 99 100") == 2
+p iq_test("5 3 2") == 3
+
+
+
+
+
+
+
+
+
+
+
+
+##################
+
 
 def iq_test(numbers)
   arr = numbers.split(" ")
