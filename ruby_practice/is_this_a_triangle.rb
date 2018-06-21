@@ -8,6 +8,23 @@
 # to be accepted).
 
 
+p isTriangle(1,2,3) == false
+p isTriangle(1,3,2) == false
+p isTriangle(3,1,2) == false
+
+p isTriangle(4,2,3) == true
+p isTriangle(5,1,5) == true
+p isTriangle(2,2,2) == true
+
+
+
+
+
+
+
+
+
+#####################333
 def isTriangle(a,b,c)
    if a + b > c
      if b + c > a
