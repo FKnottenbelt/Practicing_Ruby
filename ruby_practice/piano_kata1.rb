@@ -55,7 +55,26 @@ how many years it would take it is just not possible) and return the string
 42    "white"
 100   "black"
 2017  "white"
-===
+=end
+
+p black_or_white_key(1) == "white"
+p black_or_white_key(5) == "black"
+p black_or_white_key(12) == "black"
+p black_or_white_key(42) == "white"
+p black_or_white_key(88) == "white"
+p black_or_white_key(89) == "white"
+
+
+
+
+
+
+
+
+
+
+###########################3333333
+=begin
 i: number of keys played
 o: string, color of key you end on
 r: 88 keys, starting on a (9), ending on c (0)
@@ -78,28 +97,27 @@ def black_or_white_key(key_press_count)
   key == 'b'? 'black' : 'white'
 end
 
-p black_or_white_key(1) == "white"
-p black_or_white_key(5) == "black"
-p black_or_white_key(12) == "black"
-p black_or_white_key(42) == "white"
-p black_or_white_key(88) == "white"
-p black_or_white_key(89) == "white"
 
-# Test.describe("Example tests") do
-#   Test.assert_equals(black_or_white_key(1), "white")
-#   Test.assert_equals(black_or_white_key(5), "black")
-#   Test.assert_equals(black_or_white_key(12), "black")
-#   Test.assert_equals(black_or_white_key(42), "white")
-#   Test.assert_equals(black_or_white_key(88), "white")
-#   Test.assert_equals(black_or_white_key(89), "white")
-#   Test.assert_equals(black_or_white_key(92), "white")
-#   Test.assert_equals(black_or_white_key(100), "black")
-#   Test.assert_equals(black_or_white_key(111), "white")
-#   Test.assert_equals(black_or_white_key(200), "black")
-#   Test.assert_equals(black_or_white_key(2017), "white")
-# end
+# alternative
+=begin
+keyboard has 88 keys
+lowest is white and an A
+%w( a bes b c des d es e f ges g as)
+%w( w b w w b w b w w b w b )
+ f: 0 based index: do n - 1
+    get back one keyboard: n mod 88  gives keys
+    keys mod 12 goes back into the octave
+    than take that index nr s element
+    if w than white, else black
+=end
+def black_or_white_key(n)
+  arr = %w( w b w w b w b w w b w b )
+  index = (n-1) % 88 % 12
+  color = arr[index]
+  color == 'w' ? 'white' : 'black'
+end
 
 # top solution
-def black_or_white_key key_press_count
+def black_or_white_key(key_press_count)
   'wbwwbwbwwbwb'[(key_press_count-1)%88%12] == ?w ? 'white' : 'black'
 end
