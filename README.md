@@ -1,2 +1,2 @@
 # README #
-Learning Ruby
+Small Ruby exercises
