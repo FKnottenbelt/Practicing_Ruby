@@ -36,7 +36,17 @@ As the Next closest year with only distinct digits is 9012 .
 Explanation:
 
 As the Next closest year with only distinct digits is 1023 .
-=====
+=end
+
+p next_happy_year(1001) == 1023
+p next_happy_year(1123) == 1203
+p next_happy_year(1987) == 2013
+
+
+
+
+#############
+=begin
 i: year
 o: year
 f: break up it digits, see if uniq if not next counter
@@ -49,9 +59,6 @@ def next_happy_year(year)
   end
 end
 
-p next_happy_year(1001) == 1023
-p next_happy_year(1123) == 1203
-p next_happy_year(1987) == 2013
 
 # describe "Basic tests" do
 #   Test.assert_equals(next_happy_year(1001),1023)
